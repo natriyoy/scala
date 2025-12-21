@@ -1,11 +1,11 @@
-
 <!DOCTYPE html>
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Фундамент-Строй | Надёжные фундаменты и свайные работы</title>
+    <title>Услуги | Фундамент-Строй</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/main.css" />
     <style>
         /* Базовые стили и фирменные цвета */
         :root {
@@ -39,99 +39,6 @@
             padding: 0 15px;
         }
 
-        /* Логотип и шапка */
-        header {
-            background-color: var(--white);
-            box-shadow: var(--shadow);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-
-        .header-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 15px 0;
-        }
-
-        .logo {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            text-decoration: none;
-            color: var(--dark-text);
-        }
-
-        .logo-icon {
-            width: 50px;
-            height: 50px;
-            background: linear-gradient(135deg, var(--primary-blue) 0%, #003A5F 100%);
-            border-radius: 8px;
-            position: relative;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .logo-text {
-            display: flex;
-            flex-direction: column;
-        }
-
-        .logo-main {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: var(--primary-blue);
-        }
-
-        .logo-sub {
-            font-size: 0.8rem;
-            color: var(--steel-gray);
-        }
-
-        nav ul {
-            display: flex;
-            list-style: none;
-            gap: 30px;
-        }
-
-        nav a {
-            text-decoration: none;
-            color: var(--dark-text);
-            font-weight: 600;
-            font-size: 1.1rem;
-            transition: var(--transition);
-            position: relative;
-        }
-
-        nav a:hover {
-            color: var(--primary-blue);
-        }
-
-        nav a.active {
-            color: var(--accent-orange);
-        }
-
-        nav a.active:after {
-            content: "";
-            position: absolute;
-            width: 100%;
-            height: 3px;
-            background-color: var(--accent-orange);
-            bottom: -5px;
-            left: 0;
-            border-radius: 2px;
-        }
-
-        .mobile-menu-btn {
-            display: none;
-            font-size: 1.5rem;
-            background: none;
-            border: none;
-            color: var(--primary-blue);
-            cursor: pointer;
-        }
 
         /* Герой-баннер */
         .hero {
@@ -598,175 +505,189 @@
                 padding: 25px;
             }
         }
+
     </style>
 </head>
 <body>
-<!-- Шапка сайта -->
-
-
-<!-- Главная страница -->
-<main id="indexPage">
-    <!-- Герой-баннер -->
-    <section class="hero">
-        <div class="container">
-            <h1>Надёжные фундаменты под ключ</h1>
-            <p>Профессиональное выполнение свайных работ и строительства фундаментов любой сложности. Гарантия качества, соблюдение сроков и современных технологий.</p>
-            <a href="#contact" class="btn">Получить консультацию</a>
-        </div>
-    </section>
-
-    <!-- Услуги -->
-    <section class="services" id="services">
-        <div class="container">
-            <h2 class="section-title">Наши услуги</h2>
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-img service-1"></div>
-                    <div class="service-content">
-                        <h3>Свайные работы</h3>
-                        <p>Устройство свайных фундаментов различного типа: забивные, буронабивные, винтовые сваи.</p>
-                        <a href="services.html#pile-works" class="btn">Подробнее</a>
-                    </div>
-                </div>
-
-                <div class="service-card">
-                    <div class="service-img service-2"></div>
-                    <div class="service-content">
-                        <h3>Ленточные фундаменты</h3>
-                        <p>Строительство монолитных и сборных ленточных фундаментов для любых типов зданий.</p>
-                        <a href="services.html#strip-foundation" class="btn">Подробнее</a>
-                    </div>
-                </div>
-
-                <div class="service-card">
-                    <div class="service-img service-3"></div>
-                    <div class="service-content">
-                        <h3>Плитные фундаменты</h3>
-                        <p>Устройство монолитных плитных фундаментов повышенной несущей способности.</p>
-                        <a href="services.html#slab-foundation" class="btn">Подробнее</a>
-                    </div>
-                </div>
-
-                <div class="service-card">
-                    <div class="service-img service-4"></div>
-                    <div class="service-content">
-                        <h3>Расчёт и проектирование</h3>
-                        <p>Инженерные расчёты, проектирование фундаментов и сопровождение строительства.</p>
-                        <a href="services.html#design" class="btn">Подробнее</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- О компании -->
-    <section class="about" id="about">
-        <div class="container about-container">
-            <div class="about-img"></div>
-            <div class="about-content">
-                <h2>О компании «Фундамент-Строй»</h2>
-                <p>Мы специализируемся на выполнении свайных работ и строительстве фундаментов любой сложности. Более 15 лет обеспечиваем надёжность и долговечность построенных нами объектов.</p>
-                <p>Наша команда состоит из квалифицированных инженеров и опытных строителей, которые используют современное оборудование и технологии.</p>
-
-                <div class="features">
-                    <div class="feature">
-                        <i class="fas fa-check-circle"></i>
-                        <span>Гарантия на все работы</span>
-                    </div>
-                    <div class="feature">
-                        <i class="fas fa-calendar-alt"></i>
-                        <span>Соблюдение сроков</span>
-                    </div>
-                    <div class="feature">
-                        <i class="fas fa-ruler-combined"></i>
-                        <span>Индивидуальный подход</span>
-                    </div>
-                    <div class="feature">
-                        <i class="fas fa-award"></i>
-                        <span>Сертифицированные специалисты</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Форма заявки -->
-    <section class="contact-form" id="contact">
-        <div class="container">
-            <div class="form-container">
-                <h2>Оставьте заявку на консультацию</h2>
-                <form id="consultationForm">
-                    <div class="form-group">
-                        <label for="name">Ваше имя</label>
-                        <input type="text" id="name" class="form-control" placeholder="Иван Иванов" required>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="phone">Телефон</label>
-                        <input type="tel" id="phone" class="form-control" placeholder="+7 (XXX) XXX-XX-XX" required>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="service">Интересующая услуга</label>
-                        <select id="service" class="form-control">
-                            <option value="">Выберите услугу</option>
-                            <option value="Свайные работы">Свайные работы</option>
-                            <option value="Ленточный фундамент">Ленточный фундамент</option>
-                            <option value="Плитный фундамент">Плитный фундамент</option>
-                            <option value="Проектирование">Проектирование</option>
-                        </select>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="message">Комментарий</label>
-                        <textarea id="message" class="form-control" rows="4" placeholder="Опишите вашу задачу..."></textarea>
-                    </div>
-
-                    <button type="submit" class="btn" style="width: 100%;">Отправить заявку</button>
-                </form>
-            </div>
-        </div>
-    </section>
-</main>
-
-<!-- Футер -->
-<footer>
+@@include('../components/_header.html')
+@@include('../components/_hero.html', {
+"title": "Наши услуги",
+"description": "Полный спектр услуг по свайным работам и строительству фундаментов. Индивидуальный подход к каждому проекту.",
+"link": "#contact",
+"buttonText": "Получить консультацию",
+"backgroundImage": "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1770&q=80"
+})
+<section class="services-detail">
     <div class="container">
-        <div class="footer-container">
-            <div class="footer-logo">
-                <a href="index.html" class="logo">
-                    <div class="logo-text">
-                        <div class="logo-main">ФУНДАМЕНТ-СТРОЙ</div>
-                        <div class="logo-sub">Свайные работы и фундаменты</div>
-                    </div>
-                </a>
-                <p>Надёжные решения для вашего строительства. Качество, проверенное временем.</p>
-            </div>
-
-            <div class="footer-links">
-                <h3>Разделы сайта</h3>
-                <ul>
-                    <li><a href="index.html">Главная</a></li>
-                    <li><a href="services.html">Услуги</a></li>
-                    <li><a href="#about">О компании</a></li>
-                    <li><a href="#contact">Контакты</a></li>
-                </ul>
-            </div>
-
-            <div class="footer-contact">
-                <h3>Контакты</h3>
-                <p><i class="fas fa-map-marker-alt"></i> г. Нижний Новгород, ул. Строителей, 15</p>
-                <p><i class="fas fa-phone"></i> +7 (831) 123-45-67</p>
-                <p><i class="fas fa-envelope"></i> info@fundament-stroy.ru</p>
-                <p><i class="fas fa-clock"></i> Пн-Пт: 9:00-18:00</p>
+        <!-- Свайные работы -->
+        <!-- Свайные работы -->
+        <div class="service-detail" id="pile-works">
+            <div class="service-detail-content">
+                <div class="service-detail-text">
+                    <h2>Свайные работы</h2>
+                    <p>Выполняем все виды свайных работ с использованием современного оборудования и технологий.</p>
+                    <ul>
+                        <li>Забивные железобетонные сваи</li>
+                        <li>Буронабивные сваи</li>
+                        <li>Винтовые металлические сваи</li>
+                        <li>Шпунтовое ограждение котлованов</li>
+                        <li>Усиление существующих фундаментов</li>
+                        <li>Статические и динамические испытания свай</li>
+                        <li>Устройство свайных полей</li>
+                        <li>Контроль качества свайных работ</li>
+                    </ul>
+                    <p><strong>Сроки выполнения:</strong> от 3 до 14 дней в зависимости от объема</p>
+                    <p><strong>Оборудование:</strong> сваебойные установки, буровые станки, вибропогружатели</p>
+                    <a href="index.html#contact" class="btn">Заказать расчёт</a>
+                </div>
+                <div class="service-detail-img" style="background-image: url('https://images.unsplash.com/photo-1584622650111-993a426fbf0a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1770&q=80');"></div>
             </div>
         </div>
 
-        <div class="copyright">
-            <p>&copy; 2023 «Фундамент-Строй». Все права защищены.</p>
+        <!-- Ленточные фундаменты -->
+        <div class="service-detail" id="strip-foundation">
+            <div class="service-detail-content reverse">
+                <div class="service-detail-img" style="background-image: url('https://images.unsplash.com/photo-1541888946425-d81bb19240f5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1770&q=80');"></div>
+                <div class="service-detail-text">
+                    <h2>Ленточные фундаменты</h2>
+                    <p>Строительство монолитных и сборных ленточных фундаментов для любых типов зданий.</p>
+                    <ul>
+                        <li>Мелкозаглубленные ленточные фундаменты</li>
+                        <li>Заглубленные ленточные фундаменты</li>
+                        <li>Сборные железобетонные фундаменты</li>
+                        <li>Усиленные фундаменты для тяжелых конструкций</li>
+                        <li>Фундаменты с цокольным этажом</li>
+                        <li>Ленточно-свайные фундаменты</li>
+                        <li>Фундаменты для домов с подвалом</li>
+                        <li>Устройство гидроизоляции и дренажа</li>
+                    </ul>
+                    <p><strong>Материалы:</strong> бетон классов B15-B30, арматура А400-А500, гидроизоляционные материалы</p>
+                    <p><strong>Глубина заложения:</strong> от 0.5 до 2.5 метров</p>
+                    <a href="index.html#contact" class="btn">Заказать расчёт</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Плитные фундаменты -->
+        <div class="service-detail" id="slab-foundation">
+            <div class="service-detail-content">
+                <div class="service-detail-text">
+                    <h2>Плитные фундаменты</h2>
+                    <p>Устройство монолитных плитных фундаментов повышенной несущей способности.</p>
+                    <ul>
+                        <li>Плоские плитные фундаменты</li>
+                        <li>Ребристые плитные фундаменты</li>
+                        <li>Фундаменты с ростверком</li>
+                        <li>Утеплённые шведские плиты (УШП)</li>
+                        <li>Фундаменты для сложных грунтов</li>
+                        <li>Плиты с армированием в две сетки</li>
+                        <li>Фундаменты для промышленных объектов</li>
+                        <li>Устройство подбетонки и подготовки</li>
+                    </ul>
+                    <p><strong>Преимущества:</strong> равномерное распределение нагрузки, устойчивость к пучению грунтов, возможность устройства на слабых грунтах</p>
+                    <p><strong>Толщина плиты:</strong> от 200 до 500 мм</p>
+                    <a href="index.html#contact" class="btn">Заказать расчёт</a>
+                </div>
+                <div class="service-detail-img" style="background-image: url('https://images.unsplash.com/photo-1541888946425-d81bb19240f5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1770&q=80');"></div>
+            </div>
+        </div>
+
+        <!-- Расчёт и проектирование -->
+        <div class="service-detail" id="design">
+            <div class="service-detail-content reverse">
+                <div class="service-detail-img" style="background-image: url('https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&auto=format&fit=crop&w=1770&q=80');"></div>
+                <div class="service-detail-text">
+                    <h2>Расчёт и проектирование</h2>
+                    <p>Инженерные расчёты, проектирование фундаментов и сопровождение строительства.</p>
+                    <ul>
+                        <li>Расчёт несущей способности фундаментов</li>
+                        <li>Проектирование фундаментов по СП 50-101-2004</li>
+                        <li>Разработка конструкторской документации (КЖ)</li>
+                        <li>Авторский надзор за строительством</li>
+                        <li>Экспертиза проектной документации</li>
+                        <li>Расчёт осадок и деформаций</li>
+                        <li>Подбор оптимального типа фундамента</li>
+                        <li>Сметное планирование и калькуляция</li>
+                    </ul>
+                    <p><strong>Результат:</strong> полный пакет проектной документации, согласованный с требованиями ГОСТ и СНиП</p>
+                    <p><strong>Сроки проектирования:</strong> от 5 до 14 рабочих дней</p>
+                    <a href="index.html#contact" class="btn">Заказать проект</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Усиление фундаментов -->
+        <div class="service-detail" id="strengthening">
+            <div class="service-detail-content">
+                <div class="service-detail-text">
+                    <h2>Усиление фундаментов</h2>
+                    <p>Техническое обследование и усиление существующих фундаментов, реконструкция и восстановление несущей способности.</p>
+                    <ul>
+                        <li>Обследование технического состояния фундаментов</li>
+                        <li>Усиление ленточных фундаментов</li>
+                        <li>Реконструкция свайных фундаментов</li>
+                        <li>Устройство железобетонных обойм</li>
+                        <li>Инъектирование трещин и пустот</li>
+                        <li>Усиление фундаментов буроинъекционными сваями</li>
+                        <li>Восстановление разрушенных конструкций</li>
+                        <li>Подводка новых фундаментов под существующие здания</li>
+                    </ul>
+                    <p><strong>Диагностика:</strong> визуальный осмотр, инструментальные измерения, определение прочности бетона</p>
+                    <p><strong>Методы усиления:</strong> цементация, силикатизация, инъектирование, расширение подошвы</p>
+                    <a href="index.html#contact" class="btn">Заказать оценку</a>
+                </div>
+                <div class="service-detail-img" style="background-image: url('https://images.unsplash.com/photo-1541888946425-d81bb19240f5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1770&q=80');"></div>
+            </div>
+        </div>
+
+        <!-- Геологические изыскания -->
+        <div class="service-detail" id="geology">
+            <div class="service-detail-content reverse">
+                <div class="service-detail-img" style="background-image: url('https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&auto=format&fit=crop&w=1770&q=80');"></div>
+                <div class="service-detail-text">
+                    <h2>Геологические изыскания</h2>
+                    <p>Проведение геологических исследований участка, анализ грунтов, составление технического отчета для проектирования.</p>
+                    <ul>
+                        <li>Бурение геологических скважин до 20 метров</li>
+                        <li>Отбор образцов грунта и воды</li>
+                        <li>Лабораторные исследования грунтов</li>
+                        <li>Определение уровня грунтовых вод</li>
+                        <li>Исследование физико-механических свойств грунтов</li>
+                        <li>Оценка коррозионной агрессивности грунтов</li>
+                        <li>Составление инженерно-геологических разрезов</li>
+                        <li>Прогноз возможных геологических процессов</li>
+                    </ul>
+                    <p><strong>Результат:</strong> технический отчет с рекомендациями по типу фундамента и глубине заложения</p>
+                    <p><strong>Стандарты:</strong> исследования проводятся по СП 47.13330.2016</p>
+                    <a href="index.html#contact" class="btn">Узнать стоимость</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Калькулятор -->
+        <div class="calculator">
+            <h3>Калькулятор примерной стоимости</h3>
+            <div class="form-group">
+                <label for="foundationType">Тип фундамента</label>
+                <select id="foundationType" class="form-control" onchange="calculateCost()">
+                    <option value="">Выберите тип</option>
+                    <option value="pile">Свайный фундамент</option>
+                    <option value="strip">Ленточный фундамент</option>
+                    <option value="slab">Плитный фундамент</option>
+                    <option value="column">Столбчатый фундамент</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="area">Площадь фундамента (м²)</label>
+                <input type="number" id="area" class="form-control" min="10" max="1000" step="10" placeholder="100" oninput="calculateCost()">
+            </div>
+
+            <div class="calc-result" id="calcResult">Введите параметры для расчёта</div>
         </div>
     </div>
-</footer>
+</section>
+@@include('../components/_footer.html')
 
 <script>
     // Мобильное меню
@@ -785,44 +706,6 @@
         });
     });
 
-    // Обработка формы
-    document.getElementById('consultationForm').addEventListener('submit', function(e) {
-        e.preventDefault();
-
-        const name = document.getElementById('name').value;
-        const phone = document.getElementById('phone').value;
-
-        if(name && phone) {
-            alert(`Спасибо, ${name}! Ваша заявка принята. Мы свяжемся с вами по номеру ${phone} в ближайшее время.`);
-            this.reset();
-        } else {
-            alert('Пожалуйста, заполните обязательные поля: имя и телефон.');
-        }
-    });
-
-    // Простой калькулятор для страницы услуг
-    function calculateCost() {
-        const type = document.getElementById('foundationType')?.value;
-        const area = parseFloat(document.getElementById('area')?.value) || 0;
-
-        let pricePerM2 = 0;
-
-        switch(type) {
-            case 'pile': pricePerM2 = 3500; break;
-            case 'strip': pricePerM2 = 4200; break;
-            case 'slab': pricePerM2 = 4800; break;
-            case 'column': pricePerM2 = 3000; break;
-            default: pricePerM2 = 0;
-        }
-
-        const totalCost = area * pricePerM2;
-
-        if(totalCost > 0) {
-            document.getElementById('calcResult').textContent = `Примерная стоимость: ${totalCost.toLocaleString('ru-RU')} руб.`;
-        } else {
-            document.getElementById('calcResult').textContent = 'Введите параметры для расчёта';
-        }
-    }
 </script>
 </body>
 </html>

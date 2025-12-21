@@ -1,17 +1,502 @@
-<!doctype html>
-<html lang="en">
+
+<!DOCTYPE html>
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Фундамент-Строй | Надёжные фундаменты и свайные работы</title>
     <link rel="stylesheet" href="assets/css/main.css" />
-    <title>Document</title>
+
+    <style>
+        /* Базовые стили и фирменные цвета */
+        :root {
+            --primary-blue: #005B96;
+            --steel-gray: #6C757D;
+            --accent-orange: #FF7A00;
+            --dark-text: #212529;
+            --light-bg: #f8f9fa;
+            --white: #ffffff;
+            --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Roboto, sans-serif;
+        }
+
+        body {
+            color: var(--dark-text);
+            line-height: 1.6;
+            background-color: var(--light-bg);
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        /* Услуги */
+        .services {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+            color: var(--primary-blue);
+            font-size: 2.2rem;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        /* О компании */
+        .about {
+            padding: 80px 0;
+            background-color: var(--white);
+        }
+
+        .about-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .about-img {
+            height: 400px;
+            background-image: url('https://images.unsplash.com/photo-1541888946425-d81bb19240f5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1770&q=80');
+            background-size: cover;
+            background-position: center;
+            border-radius: 10px;
+        }
+
+        .about-content h2 {
+            color: var(--primary-blue);
+            margin-bottom: 20px;
+            font-size: 2.2rem;
+        }
+
+        .about-content p {
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .feature {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .feature i {
+            color: var(--accent-orange);
+            font-size: 1.5rem;
+        }
+
+        /* Форма заявки */
+        .contact-form {
+            padding: 80px 0;
+            background-color: var(--light-bg);
+        }
+
+        .form-container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: var(--white);
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+        }
+
+        .form-container h2 {
+            text-align: center;
+            color: var(--primary-blue);
+            margin-bottom: 30px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+            transition: var(--transition);
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: var(--primary-blue);
+            box-shadow: 0 0 0 3px rgba(0, 91, 150, 0.2);
+        }
+
+        /* Страница Услуги */
+        .page-header {
+            background-color: var(--primary-blue);
+            color: var(--white);
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .page-header h1 {
+            font-size: 2.8rem;
+            margin-bottom: 15px;
+        }
+
+        .page-description {
+            max-width: 700px;
+            margin: 0 auto;
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        .services-detail {
+            padding: 80px 0;
+        }
+
+        .service-detail {
+            margin-bottom: 60px;
+            background-color: var(--white);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+        }
+
+        .service-detail-content {
+            padding: 40px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .service-detail-text h2 {
+            color: var(--primary-blue);
+            margin-bottom: 20px;
+            font-size: 1.8rem;
+        }
+
+        .service-detail-text ul {
+            list-style-position: inside;
+            margin: 15px 0;
+        }
+
+        .service-detail-text li {
+            margin-bottom: 8px;
+        }
+
+        .service-detail-img {
+            height: 300px;
+            border-radius: 8px;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .pricing {
+            padding: 80px 0;
+            background-color: var(--light-bg);
+        }
+
+        .pricing-table {
+            overflow-x: auto;
+            margin-top: 30px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: var(--white);
+            box-shadow: var(--shadow);
+        }
+
+        th, td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid #eee;
+        }
+
+        th {
+            background-color: var(--primary-blue);
+            color: var(--white);
+            font-weight: 600;
+        }
+
+        tr:hover {
+            background-color: #f9f9f9;
+        }
+
+        .calculator {
+            background-color: var(--white);
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+            margin-top: 50px;
+        }
+
+        .calculator h3 {
+            color: var(--primary-blue);
+            margin-bottom: 20px;
+        }
+
+        .calc-result {
+            background-color: var(--light-bg);
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 20px;
+            font-weight: 600;
+            font-size: 1.2rem;
+            color: var(--primary-blue);
+            text-align: center;
+        }
+
+        /* Адаптивность */
+        @media (max-width: 992px) {
+            .about-container, .service-detail-content {
+                grid-template-columns: 1fr;
+            }
+
+            .about-img {
+                height: 300px;
+                order: -1;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            nav ul {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background-color: var(--white);
+                flex-direction: column;
+                padding: 20px;
+                box-shadow: var(--shadow);
+                gap: 15px;
+            }
+
+            nav ul.active {
+                display: flex;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .features {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-container {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .hero {
+                padding: 70px 0;
+            }
+
+            .section-title {
+                font-size: 1.8rem;
+            }
+
+            .service-detail-content {
+                padding: 25px;
+            }
+
+            .form-container {
+                padding: 25px;
+            }
+        }
+    </style>
 </head>
 <body>
-<h1>Карточки</h1>
+@@include('../components/_header.html')
+<main id="indexPage">
+    @@include('../components/_hero.html', {
+    "title": "Надёжные фундаменты под ключ",
+    "description": "Профессиональное выполнение свайных работ и строительства фундаментов любой сложности. Гарантия качества, соблюдение сроков и современных технологий.",
+    "link": "#contact",
+    "buttonText": "Получить консультацию",
+    "backgroundImage": "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1770&q=80"
+    })
+    <section class="services" id="services">
+        <div class="container">
+            <h2 class="section-title">Наши услуги</h2>
+            <div class="services-grid">
+                @@include('../components/_service-card.html', {
+                "serviceClass": "service-1",
+                "title": "Свайные работы",
+                "description": "Устройство свайных фундаментов различного типа: забивные, буронабивные, винтовые сваи.",
+                "link": "services.html#pile-works",
+                "buttonText": "Подробнее"
+                })
 
+                @@include('../components/_service-card.html', {
+                "serviceClass": "service-2",
+                "title": "Ленточные фундаменты",
+                "description": "Строительство монолитных и сборных ленточных фундаментов для любых типов зданий.",
+                "link": "services.html#strip-foundation",
+                "buttonText": "Подробнее"
+                })
 
+                @@include('../components/_service-card.html', {
+                "serviceClass": "service-3",
+                "title": "Плитные фундаменты",
+                "description": "Устройство монолитных плитных фундаментов повышенной несущей способности.",
+                "link": "services.html#slab-foundation",
+                "buttonText": "Подробнее"
+                })
 
+                @@include('../components/_service-card.html', {
+                "serviceClass": "service-4",
+                "title": "Расчёт и проектирование",
+                "description": "Инженерные расчёты, проектирование фундаментов и сопровождение строительства.",
+                "link": "services.html#design",
+                "buttonText": "Подробнее"
+                })
+
+                @@include('../components/_service-card.html', {
+                "serviceClass": "service-5",
+                "title": "Усиление фундаментов",
+                "description": "Техническое обследование и усиление существующих фундаментов, реконструкция и восстановление несущей способности.",
+                "link": "services.html#strengthening",
+                "buttonText": "Заказать оценку"
+                })
+
+                @@include('../components/_service-card.html', {
+                "serviceClass": "service-6",
+                "title": "Геологические изыскания",
+                "description": "Проведение геологических исследований участка, анализ грунтов, составление технического отчета для проектирования.",
+                "link": "services.html#geology",
+                "buttonText": "Узнать стоимость"
+                })
+            </div>
+        </div>
+    </section>
+
+    <!-- О компании -->
+    <section class="about" id="about">
+        <div class="container about-container">
+            <div class="about-img"></div>
+            <div class="about-content">
+                <h2>О компании «Фундамент-Строй»</h2>
+                <p>Мы специализируемся на выполнении свайных работ и строительстве фундаментов любой сложности. Более 15 лет обеспечиваем надёжность и долговечность построенных нами объектов.</p>
+                <p>Наша команда состоит из квалифицированных инженеров и опытных строителей, которые используют современное оборудование и технологии.</p>
+
+                <div class="features">
+                    <div class="feature">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Гарантия на все работы</span>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-calendar-alt"></i>
+                        <span>Соблюдение сроков</span>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-ruler-combined"></i>
+                        <span>Индивидуальный подход</span>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-award"></i>
+                        <span>Сертифицированные специалисты</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Форма заявки -->
+    <section class="contact-form" id="contact">
+        <div class="container">
+            <div class="form-container">
+                <h2>Оставьте заявку на консультацию</h2>
+                <form id="consultationForm">
+                    <div class="form-group">
+                        <label for="name">Ваше имя</label>
+                        <input type="text" id="name" class="form-control" placeholder="Иван Иванов" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Телефон</label>
+                        <input type="tel" id="phone" class="form-control" placeholder="+7 (XXX) XXX-XX-XX" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="service">Интересующая услуга</label>
+                        <select id="service" class="form-control">
+                            <option value="">Выберите услугу</option>
+                            <option value="Свайные работы">Свайные работы</option>
+                            <option value="Ленточный фундамент">Ленточный фундамент</option>
+                            <option value="Плитный фундамент">Плитный фундамент</option>
+                            <option value="Проектирование">Проектирование</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Комментарий</label>
+                        <textarea id="message" class="form-control" rows="4" placeholder="Опишите вашу задачу..."></textarea>
+                    </div>
+
+                    <button type="submit" class="btn" style="width: 100%;">Отправить заявку</button>
+                </form>
+            </div>
+        </div>
+    </section>
+</main>
+
+@@include('../components/_footer.html')
+
+<script>
+    // Мобильное меню
+    document.getElementById('mobileMenuBtn').addEventListener('click', function() {
+        document.getElementById('mainMenu').classList.toggle('active');
+        this.innerHTML = document.getElementById('mainMenu').classList.contains('active')
+            ? '<i class="fas fa-times"></i>'
+            : '<i class="fas fa-bars"></i>';
+    });
+
+    // Закрытие меню при клике на ссылку
+    document.querySelectorAll('nav a').forEach(link => {
+        link.addEventListener('click', () => {
+            document.getElementById('mainMenu').classList.remove('active');
+            document.getElementById('mobileMenuBtn').innerHTML = '<i class="fas fa-bars"></i>';
+        });
+    });
+</script>
 </body>
 </html>
