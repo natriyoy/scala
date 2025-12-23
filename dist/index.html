@@ -72,11 +72,12 @@
         }
 
         .about-img {
-            height: auto;
 
-            background-size: cover;
-            background-position: center;
+            width: 100%;
+            height: auto;
+            object-fit: cover;
             border-radius: 10px;
+            box-shadow: var(--shadow);
         }
 
         .about-content h2 {
@@ -280,7 +281,6 @@
             }
 
             .about-img {
-                height: 300px;
                 order: -1;
             }
 
@@ -481,7 +481,7 @@
     
     <section class="about" id="about">
         <div class="container about-container">
-            <img class="about-img" src="./assets/images/cat1.webp">
+            <img class="about-img" src="./assets/images/cat1.webp" alt="">
             <div class="about-content">
                 <h2>О компании «СКАЛА»</h2>
                 <p>Мы специализируемся на выполнении свайных работ и строительстве фундаментов любой сложности. Более 15 лет обеспечиваем надёжность и долговечность построенных нами объектов.</p>
