@@ -7,341 +7,14 @@
     <title>СКАЛА | Надёжные фундаменты и свайные работы</title>
     <link rel="stylesheet" href="assets/css/main.css">
 
-    <style>
-        /* Базовые стили и фирменные цвета */
-        :root {
-            --primary-blue: #005B96;
-            --steel-gray: #6C757D;
-            --accent-orange: #FF7A00;
-            --dark-text: #212529;
-            --light-bg: #f8f9fa;
-            --white: #ffffff;
-            --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-            --transition: all 0.3s ease;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Roboto, sans-serif;
-        }
-
-        body {
-            color: var(--dark-text);
-            line-height: 1.6;
-            background-color: var(--light-bg);
-        }
-
-        .container {
-            width: 90%;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 15px;
-        }
-
-        /* Услуги */
-        .services {
-            padding: 80px 0;
-        }
-
-        .section-title {
-            text-align: center;
-            margin-bottom: 50px;
-            color: var(--primary-blue);
-            font-size: 2.2rem;
-        }
-
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
-        }
-
-        /* О компании */
-        .about {
-            padding: 80px 0;
-            background-color: var(--white);
-        }
-
-        .about-container {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 50px;
-            align-items: center;
-        }
-
-        .about-img {
-
-            width: 100%;
-            height: auto;
-            object-fit: cover;
-            border-radius: 10px;
-            box-shadow: var(--shadow);
-        }
-
-        .about-content h2 {
-            color: var(--primary-blue);
-            margin-bottom: 20px;
-            font-size: 2.2rem;
-        }
-
-        .about-content p {
-            margin-bottom: 20px;
-            font-size: 1.1rem;
-        }
-
-        .features {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 20px;
-            margin-top: 30px;
-        }
-
-        .feature {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .feature i {
-            color: var(--accent-orange);
-            font-size: 1.5rem;
-        }
-
-        /* Форма заявки */
-        .contact-form {
-            padding: 80px 0;
-            background-color: var(--light-bg);
-        }
-
-        .form-container {
-            max-width: 600px;
-            margin: 0 auto;
-            background-color: var(--white);
-            padding: 40px;
-            border-radius: 10px;
-            box-shadow: var(--shadow);
-        }
-
-        .form-container h2 {
-            text-align: center;
-            color: var(--primary-blue);
-            margin-bottom: 30px;
-        }
-
-        .form-group {
-            margin-bottom: 20px;
-        }
-
-        .form-group label {
-            display: block;
-            margin-bottom: 8px;
-            font-weight: 600;
-        }
-
-        .form-control {
-            width: 100%;
-            padding: 12px 15px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            font-size: 1rem;
-            transition: var(--transition);
-        }
-
-        .form-control:focus {
-            outline: none;
-            border-color: var(--primary-blue);
-            box-shadow: 0 0 0 3px rgba(0, 91, 150, 0.2);
-        }
-
-        /* Страница Услуги */
-        .page-header {
-            background-color: var(--primary-blue);
-            color: var(--white);
-            padding: 80px 0;
-            text-align: center;
-        }
-
-        .page-header h1 {
-            font-size: 2.8rem;
-            margin-bottom: 15px;
-        }
-
-        .page-description {
-            max-width: 700px;
-            margin: 0 auto;
-            font-size: 1.1rem;
-            opacity: 0.9;
-        }
-
-        .services-detail {
-            padding: 80px 0;
-        }
-
-        .service-detail {
-            margin-bottom: 60px;
-            background-color: var(--white);
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: var(--shadow);
-        }
-
-        .service-detail-content {
-            padding: 40px;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 40px;
-            align-items: center;
-        }
-
-        .service-detail-text h2 {
-            color: var(--primary-blue);
-            margin-bottom: 20px;
-            font-size: 1.8rem;
-        }
-
-        .service-detail-text ul {
-            list-style-position: inside;
-            margin: 15px 0;
-        }
-
-        .service-detail-text li {
-            margin-bottom: 8px;
-        }
-
-
-        .pricing {
-            padding: 80px 0;
-            background-color: var(--light-bg);
-        }
-
-        .pricing-table {
-            overflow-x: auto;
-            margin-top: 30px;
-        }
-
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            background-color: var(--white);
-            box-shadow: var(--shadow);
-        }
-
-        th, td {
-            padding: 15px;
-            text-align: left;
-            border-bottom: 1px solid #eee;
-        }
-
-        th {
-            background-color: var(--primary-blue);
-            color: var(--white);
-            font-weight: 600;
-        }
-
-        tr:hover {
-            background-color: #f9f9f9;
-        }
-
-        .calculator {
-            background-color: var(--white);
-            padding: 40px;
-            border-radius: 10px;
-            box-shadow: var(--shadow);
-            margin-top: 50px;
-        }
-
-        .calculator h3 {
-            color: var(--primary-blue);
-            margin-bottom: 20px;
-        }
-
-        .calc-result {
-            background-color: var(--light-bg);
-            padding: 20px;
-            border-radius: 8px;
-            margin-top: 20px;
-            font-weight: 600;
-            font-size: 1.2rem;
-            color: var(--primary-blue);
-            text-align: center;
-        }
-
-        /* Адаптивность */
-        @media (max-width: 992px) {
-            .about-container, .service-detail-content {
-                grid-template-columns: 1fr;
-            }
-
-            .about-img {
-                order: -1;
-            }
-
-            .hero h1 {
-                font-size: 2.5rem;
-            }
-        }
-
-        @media (max-width: 768px) {
-            nav ul {
-                display: none;
-                position: absolute;
-                top: 100%;
-                left: 0;
-                width: 100%;
-                background-color: var(--white);
-                flex-direction: column;
-                padding: 20px;
-                box-shadow: var(--shadow);
-                gap: 15px;
-            }
-
-            nav ul.active {
-                display: flex;
-            }
-
-            .mobile-menu-btn {
-                display: block;
-            }
-
-            .hero h1 {
-                font-size: 2rem;
-            }
-
-            .features {
-                grid-template-columns: 1fr;
-            }
-
-            .footer-container {
-                grid-template-columns: 1fr;
-                gap: 30px;
-            }
-        }
-
-        @media (max-width: 576px) {
-            .hero {
-                padding: 70px 0;
-            }
-
-            .section-title {
-                font-size: 1.8rem;
-            }
-
-            .service-detail-content {
-                padding: 25px;
-            }
-
-            .form-container {
-                padding: 25px;
-            }
-        }
-    </style>
 </head>
 <body>
+
+
 <header>
-    <div class="container header-container">
-        <a href="index.html" class="logo">
+    <div class="nav">
+        
+        <a href="index.html" class="log">
             <svg width="250" height="60" viewBox="0 0 326 68" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M2.00024 66L27.5002 27.6L53.0002 53.2L78.5002 2.00002L104 40.4L129.5 14.8L155 66" stroke="#2E3436" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
                 <path d="M187.932 13.4541C189.083 13.7019 190.181 14.0737 191.226 14.5871C192.271 15.0651 193.263 15.6493 194.201 16.322C195.14 17.0125 196.007 17.7914 196.786 18.6766L192.749 22.8723C190.482 20.2876 187.667 18.9776 184.32 18.9776C180.973 18.9776 178.246 20.1991 176.051 22.6599C174.97 23.8814 174.138 25.2445 173.589 26.7493C173.022 28.2541 172.757 29.8651 172.757 31.6178C172.757 35.0876 173.855 38.0795 176.051 40.5757C178.246 43.0364 181.009 44.258 184.32 44.258C187.631 44.258 190.482 42.9656 192.749 40.3632L196.733 44.5058C195.936 45.391 195.086 46.1699 194.166 46.8604C193.245 47.5508 192.253 48.135 191.155 48.6484C189.048 49.6398 186.764 50.1355 184.302 50.1355C179.344 50.1355 175.201 48.312 171.889 44.6652C170.313 42.8594 169.109 40.8766 168.294 38.6991C167.48 36.5393 167.055 34.167 167.055 31.6178C167.055 29.0685 167.462 26.6962 168.294 24.5364C169.109 22.3766 170.331 20.3761 171.942 18.5704C175.218 14.9235 179.344 13.1 184.302 13.1C185.542 13.1 186.746 13.224 187.897 13.4541H187.932Z" fill="#EF791A"/>
@@ -374,23 +47,91 @@
                 <path d="M317.872 59.0934H316.013V63.6609H315.145V59.0934H313.286V58.2968H317.89V59.0934H317.872Z" fill="#005B97"/>
                 <path d="M322.848 61.9968C322.848 62.2623 322.795 62.4925 322.689 62.7049C322.583 62.9174 322.459 63.0944 322.282 63.2183C322.087 63.3776 321.857 63.4839 321.626 63.5547C321.396 63.6255 321.095 63.6609 320.741 63.6609H318.776V58.2968H319.643V60.3858H320.777C321.166 60.3858 321.467 60.4035 321.68 60.4566C321.892 60.5097 322.105 60.5982 322.317 60.7575C322.494 60.8992 322.636 61.0762 322.724 61.2886C322.813 61.5011 322.866 61.7489 322.866 61.9968H322.848ZM321.945 62.0145C321.945 61.8552 321.91 61.7135 321.857 61.5896C321.804 61.4657 321.715 61.3595 321.591 61.2886C321.467 61.2178 321.308 61.1647 321.148 61.147C320.989 61.147 320.741 61.1293 320.44 61.1293H319.625V62.9528H320.422C320.723 62.9528 320.971 62.9528 321.131 62.9174C321.308 62.8819 321.449 62.8465 321.573 62.758C321.697 62.6695 321.786 62.581 321.857 62.4571C321.91 62.3508 321.945 62.1915 321.945 62.0145ZM323.716 58.2968H324.584V63.6609H323.716V58.2968Z" fill="#005B97"/>
             </svg>
-
         </a>
 
-        <button class="mobile-menu-btn" id="mobileMenuBtn">
-            <i class="fas fa-bars"></i>
-        </button>
+        <ul class="nav-menu desktop-menu">
+            <li><a class="nav-menu-cl" href="index.html">Главная</a></li>
+            <li><a class="nav-menu-cl" href="Services.html">Услуги</a></li>
+            <li><a class="nav-menu-cl" href="index.html#about">О компании</a></li>
+            <li><a class="nav-menu-cl" href="index.html#contact">Контакты</a></li>
+        </ul>
 
-        <nav>
-            <ul id="mainMenu">
-                <li><a href="index.html">Главная</a></li>
-                <li><a href="Services.html">Услуги</a></li>
-                <li><a href="#about">О компании</a></li>
-                <li><a href="#contact">Контакты</a></li>
+        <div class="svet">
+            <div class="burger-icon" id="burgerToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    
+    <div class="burger-modal" id="burgerModal">
+        <div class="burger-modal-content">
+            <div class="burger-close" id="burgerClose"></div>
+            <ul class="burger-menu">
+                <li><a class="burger-menu-cl" href="index.html">Главная</a></li>
+                <li><a class="burger-menu-cl" href="Services.html">Услуги</a></li>
+                <li><a class="burger-menu-cl" href="index.html#about">О компании</a></li>
+                <li><a class="burger-menu-cl" href="index.html#contact">Контакты</a></li>
             </ul>
-        </nav>
+        </div>
     </div>
 </header>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Элементы меню
+        const burgerToggle = document.getElementById('burgerToggle');
+        const burgerModal = document.getElementById('burgerModal');
+        const burgerClose = document.getElementById('burgerClose');
+        const burgerLinks = document.querySelectorAll('.burger-menu-cl');
+
+        // Функции для бургер-меню
+        function openBurgerMenu() {
+            burgerModal.classList.add('active');
+            burgerToggle.classList.add('active');
+            document.body.style.overflow = 'hidden'; // Блокируем скролл
+        }
+
+        function closeBurgerMenu() {
+            burgerModal.classList.remove('active');
+            burgerToggle.classList.remove('active');
+            document.body.style.overflow = ''; // Восстанавливаем скролл
+        }
+
+        // Открытие бургер-меню
+        burgerToggle.addEventListener('click', openBurgerMenu);
+
+        // Закрытие бургер-меню
+        burgerClose.addEventListener('click', closeBurgerMenu);
+
+        // Закрытие при клике на ссылку
+        burgerLinks.forEach(link => {
+            link.addEventListener('click', closeBurgerMenu);
+        });
+
+        // Закрытие при клике вне меню
+        burgerModal.addEventListener('click', (e) => {
+            if (e.target === burgerModal) {
+                closeBurgerMenu();
+            }
+        });
+
+        // Закрытие при нажатии Escape
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && burgerModal.classList.contains('active')) {
+                closeBurgerMenu();
+            }
+        });
+
+        // Закрытие меню при ресайзе окна (если перешли на десктоп)
+        window.addEventListener('resize', function() {
+            if (window.innerWidth > 1080 && burgerModal.classList.contains('active')) {
+                closeBurgerMenu();
+            }
+        });
+    });
+</script>
 <main id="indexPage">
     <section class="hero">
     <div class="container">
@@ -401,7 +142,7 @@
 </section>
     <section class="services" id="services">
         <div class="container">
-            <h2 class="section-title">Наши услуги</h2>
+            <h2 class="section-title fade-in">Наши услуги</h2>
             <div class="services-grid">
                 <div class="service-card">
     <div class="service-img">
@@ -475,7 +216,7 @@
     
     <section class="about" id="about">
         <div class="container about-container">
-            <svg width="500" height="auto" viewBox="0 0 326 68" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg width="100%" height="auto" viewBox="0 0 326 68" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M2.00024 66L27.5002 27.6L53.0002 53.2L78.5002 2.00002L104 40.4L129.5 14.8L155 66" stroke="#2E3436" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
                 <path d="M187.932 13.4541C189.083 13.7019 190.181 14.0737 191.226 14.5871C192.271 15.0651 193.263 15.6493 194.201 16.322C195.14 17.0125 196.007 17.7914 196.786 18.6766L192.749 22.8723C190.482 20.2876 187.667 18.9776 184.32 18.9776C180.973 18.9776 178.246 20.1991 176.051 22.6599C174.97 23.8814 174.138 25.2445 173.589 26.7493C173.022 28.2541 172.757 29.8651 172.757 31.6178C172.757 35.0876 173.855 38.0795 176.051 40.5757C178.246 43.0364 181.009 44.258 184.32 44.258C187.631 44.258 190.482 42.9656 192.749 40.3632L196.733 44.5058C195.936 45.391 195.086 46.1699 194.166 46.8604C193.245 47.5508 192.253 48.135 191.155 48.6484C189.048 49.6398 186.764 50.1355 184.302 50.1355C179.344 50.1355 175.201 48.312 171.889 44.6652C170.313 42.8594 169.109 40.8766 168.294 38.6991C167.48 36.5393 167.055 34.167 167.055 31.6178C167.055 29.0685 167.462 26.6962 168.294 24.5364C169.109 22.3766 170.331 20.3761 171.942 18.5704C175.218 14.9235 179.344 13.1 184.302 13.1C185.542 13.1 186.746 13.224 187.897 13.4541H187.932Z" fill="#EF791A"/>
                 <path d="M202.382 13.702H208.048V28.4312L221.011 13.702H228.501L214.76 29.5642L229.298 49.5159H222.303L210.97 34.1671L208.066 37.4953V49.5159H202.4V13.702H202.382Z" fill="#EF791A"/>
@@ -619,17 +360,17 @@
         <ul>
           <li><a href="index.html">Главная</a></li>
           <li><a href="services.html">Услуги</a></li>
-          <li><a href="#about">О компании</a></li>
-          <li><a href="#contact">Контакты</a></li>
+          <li><a href="index.html#about">О компании</a></li>
+          <li><a href="index.html#contact">Контакты</a></li>
         </ul>
       </div>
 
       <div class="footer-contact">
         <h3>Контакты</h3>
-        <p><i class="fas fa-map-marker-alt"></i> Нижегородская область
+        <p> Нижегородская область
           Городецкий район, село Зарубино</p>
-        <p><i class="fas fa-phone"></i> 8 (920) 052-19-82</p>
-        <p><i class="fas fa-envelope"></i> nn.glazunov@yandex.ru</p>
+        <p> 8 (920) 052-19-82</p>
+        <p> nn.glazunov@yandex.ru</p>
       </div>
     </div>
 
@@ -638,23 +379,5 @@
     </div>
   </div>
 </footer>
-
-<script>
-    // Мобильное меню
-    document.getElementById('mobileMenuBtn').addEventListener('click', function() {
-        document.getElementById('mainMenu').classList.toggle('active');
-        this.innerHTML = document.getElementById('mainMenu').classList.contains('active')
-            ? '<i class="fas fa-times"></i>'
-            : '<i class="fas fa-bars"></i>';
-    });
-
-    // Закрытие меню при клике на ссылку
-    document.querySelectorAll('nav a').forEach(link => {
-        link.addEventListener('click', () => {
-            document.getElementById('mainMenu').classList.remove('active');
-            document.getElementById('mobileMenuBtn').innerHTML = '<i class="fas fa-bars"></i>';
-        });
-    });
-</script>
 </body>
 </html>
